@@ -119,7 +119,7 @@ def getDifference(s,dir):
 		#if it's a file
 		if(res['type']=='file'):
 			path=res['path_for_display']
-			path = re.sub(' \/ ','/',path)
+			path = re.sub(' +\/ +','/',path)
 			path = re.sub(r'[<|>|?|$|!|:|*]',r'_',path)
 			clacoModifDate = datetime.strptime(res['modification_date'], '%d/%m/%Y %H:%M:%S')
 			try:
